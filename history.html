@@ -1,0 +1,62 @@
+history
+import React from 'react';
+import './style1.css';
+import logo from './img/ico/logo.png';
+import profileIcon from './img/ico/profile.png';
+
+const History = () => {
+  return (
+    <div className="history-page">
+      <nav className="main-navigation">
+        <div className="container">
+          <header className="site-header">
+            <div className="logo">
+              <ul>
+                <li>
+                  <img src={logo} alt="Joy of Faith logo" />
+                </li>
+                <li>
+                  <div className="logo-text">
+                    <h2>
+                      Joy of Faith
+                      <br />
+                      North Caloocan
+                    </h2>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <ul className="nav-links">
+              <li style={{ fontSize: '20px' }}><a href="index.html">Home</a></li>
+              <li style={{ fontSize: '20px' }}><a href="events.html">Events</a></li>
+              <li style={{ fontSize: '20px' }}><a href="history.html" className="active">History</a></li>
+              <li style={{ fontSize: '20px' }}><a href="blog.html">Blog / News</a></li>
+              <li style={{ fontSize: '20px' }}><a href="about.html">About Us</a></li>
+            </ul>
+            <div className="logbot">
+              <a href="signup.html">
+                <img src={profileIcon} alt="Profile" style={{ height: 50, width: 50 }} />
+              </a>
+            </div>
+          </header>
+        </div>
+      </nav>
+
+      <main className="container history-content">
+        <h1>History</h1>
+        {/* TODO: Add your church history content here */}
+      </main>
+
+      <footer className="site-footer">
+        <p>
+          JOY OF FAITH CHURCH<br />
+          BAGUMBONG, NORTH CALOOCAN<br />
+          Metro Manila, Philippines
+        </p>
+        <p>&copy; {new Date().getFullYear()} Joy of Faith North Caloocan. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+};
+
+export default History;

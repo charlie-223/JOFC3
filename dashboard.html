@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Dashboard</title>
+  <style>
+    :root {
+      --primary-color: #395005;
+      --secondary-bg: #e8e9ea;
+      --text-color: #395005;
+      --accent-color: #4caf50;
+      --btn-radius: 6px;
+      --content-width: 1200px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--secondary-bg);
+      color: var(--text-color);
+      line-height: 1.6;
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .container {
+      max-width: var(--content-width);
+      width: 100%;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+    nav ul li a:hover, nav ul li a.active {
+      text-decoration: underline;
+      opacity: 0.8;
+    }
+    .user-icon {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero-text p {
+      margin-bottom: 2rem;
+      max-width: 500px;
+    }
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+    }
+    .btn {
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      border-radius: var(--btn-radius);
+      cursor: pointer;
+      border: 2px solid var(--accent-color);
+      transition: opacity 0.2s;
+    }
+    .btn-primary {
+      background: var(--accent-color);
+      color: #fff;
+      border-color: var(--accent-color);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-color);
+    }
+    .btn:hover { opacity: 0.9; }
+    .hero-image img {
+      width: 100%;
+      border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+      object-fit: cover;
+    }
+    .info-cards {
+      display: flex;
+      gap: 1rem;
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .info-card {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .info-card svg {
+      width: 32px;
+      height: 32px;
+      fill: var(--text-color);
+    }
+    .info-text h3 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+      font-weight: bold;
+    }
+    .info-text p {
+      font-size: 0.875rem;
+      color: #555;
+    }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .hero-image { order: -1; }
+      .info-cards { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="logo">Joy of Faith<br>North Caloocan</div>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#history">History</a></li>
+        <li><a href="#news">Blog / News</a></li>
+        <li><a href="#about">About Us</a></li>
+      </ul>
+      <div class="user-icon">&#128100;</div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>One Heart, One Goal to win souls and to make disciples, According to the calling of Christ-Jesus.</h1>
+        <div class="btn-group">
+          <button class="btn btn-primary">Donate</button>
+          <button class="btn btn-outline">Volunteer</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/mnt/data/971abb95-f4b7-47ab-ac99-71aa2519b00c.png" alt="Church Front" />
+      </div>
+    </section>
+
+    <div class="info-cards">
+      <div class="info-card">
+        <!-- Target Icon -->
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16z"/><path d="M12 6a6 6 0 100 12 6 6 0 000-12zm0 10a4 4 0 110-8 4 4 0 010 8z"/><path d="M12 9a3 3 0 100 6 3 3 0 000-6z"/></svg>
+        <div class="info-text">
+          <h3>Mission</h3>
+          <p>To Win Souls and Make Disciples</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <!-- Eye Icon -->
+        <svg viewBox="0 0 24 24"><path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 12c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/><circle cx="12" cy="12" r="2.5"/></svg>
+        <div class="info-text">
+          <h3>Vision</h3>
+          <p>To Make Every Believer a Leader</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
